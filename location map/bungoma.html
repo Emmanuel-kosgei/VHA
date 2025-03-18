@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitals in Bungoma</title>
+    <!-- Bootstrap for grid layout and utility classes -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      /* Global Styles */
+      body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      /* Header Section */
+      header {
+        background-color: #0d6efd;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        font-size: 8em;
+        font-weight: 600;
+      }
+
+      /* Card Layout for Hospitals */
+      .hospital-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 15px 0;
+        padding: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .hospital-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .hospital-card h4 {
+        font-size: 48px;
+        font-weight: 600;
+        color: #0d6efd;
+      }
+      .hospital-card h5 {
+        font-size: 30px;
+        font-weight: 600;
+        color: green;
+      }
+
+      .hospital-card p {
+        font-size: 25px;
+        color: #555;
+        line-height: 1.6;
+      }
+      .hospital-card li {
+        font-size: 25px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      /* Navbar Styles */
+      nav {
+        background-color: #343a40;
+      }
+
+      nav a {
+        color: #fff;
+        padding: 14px 20px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+
+      nav a:hover {
+        background-color: #007bff;
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #343a40;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Google Map Section */
+      .map-container {
+        width: 100%;
+        height: 400px;
+        margin-top: 30px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Hospitals in Bungoma</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Hospitals in Bungoma</h2>
+
+      <!-- Hospital Cards -->
+      <div class="row">
+        <!-- Bungoma County Referral Hospital -->
+        <div class="col-md-6 col-lg-4">
+          <div class="hospital-card">
+            <h4>Bungoma County Referral Hospital</h4>
+            <p>Located in Bungoma Town, this is the main referral hospital in the area, offering a wide range of medical services.</p>
+            <p><strong>Phone:</strong> +254 20 204 1000</p>
+            <h5>Services Offered:</h5>
+            <ul>
+              <li>Emergency Services</li>
+              <li>Outpatient and Inpatient Care</li>
+              <li>Maternity and Neonatal Services</li>
+              <li>General Surgery</li>
+              <li>Laboratory and Diagnostic Services</li>
+              <li>Pharmacy</li>
+            </ul>
+            <h5>Uniqueness:</h5>
+            <p>The hospital is equipped with a modern Intensive Care Unit (ICU) and is a major referral center for patients in the Western Kenya region.</p>
+          </div>
+        </div>
+
+        <!-- Life Care Hospital Bungoma -->
+        <div class="col-md-6 col-lg-4">
+          <div class="hospital-card">
+            <h4>Life Care Hospital Bungoma</h4>
+            <p>A well-known private hospital offering various health services with a reputation for quality patient care.</p>
+            <p><strong>Phone:</strong> +254 55 203 4204</p>
+            <h5>Services Offered:</h5>
+            <ul>
+              <li>Outpatient Services</li>
+              <li>General Surgery</li>
+              <li>Maternity Services</li>
+              <li>Paediatrics</li>
+              <li>Emergency Services</li>
+              <li>Dental Services</li>
+            </ul>
+            <h5>Uniqueness:</h5>
+            <p>Life Care Hospital prides itself on offering compassionate care with a focus on patient well-being and comfort.</p>
+          </div>
+        </div>
+
+        <!-- St. Mary's Hospital -->
+        <div class="col-md-6 col-lg-4">
+          <div class="hospital-card">
+            <h4>St. Mary's Hospital</h4>
+            <p>A hospital providing excellent medical services to the community with a focus on holistic care.</p>
+            <p><strong>Phone:</strong> +254 55 203 4224</p>
+            <h5>Services Offered:</h5>
+            <ul>
+              <li>General Medical Services</li>
+              <li>Emergency Care</li>
+              <li>Obstetrics and Gynaecology</li>
+              <li>Surgical Services</li>
+              <li>Cardiology</li>
+              <li>Lab and Imaging Services</li>
+            </ul>
+            <h5>Uniqueness:</h5>
+            <p>St. Mary's Hospital is a well-established private hospital known for its dedication to serving the community.</p>
+          </div>
+        </div>
+
+        <!-- Ravine Hospital -->
+        <div class="col-md-6 col-lg-4">
+          <div class="hospital-card">
+            <h4>Ravine Hospital</h4>
+            <p>A leading healthcare provider with specialized services, offering a range of medical treatments and care.</p>
+            <p><strong>Phone:</strong> +254 55 203 4434</p>
+            <h5>Services Offered:</h5>
+            <ul>
+              <li>Medical Consultations</li>
+              <li>Emergency Medical Services</li>
+              <li>Laboratory Services</li>
+              <li>General and Specialist Surgery</li>
+              <li>Maternity and Neonatal Care</li>
+            </ul>
+            <h5>Uniqueness:</h5>
+            <p>Ravine Hospital is dedicated to providing the best medical care with a team of experienced healthcare professionals.</p>
+          </div>
+        </div>
+
+        <!-- Teresia Hospital Bungoma -->
+        <div class="col-md-6 col-lg-4">
+          <div class="hospital-card">
+            <h4>Teresia Hospital Bungoma</h4>
+            <p>Renowned for its excellent care and specialized treatments in a comfortable and caring environment.</p>
+            <p><strong>Phone:</strong> +254 55 203 4500</p>
+            <h5>Services Offered:</h5>
+            <ul>
+              <li>Inpatient and Outpatient Care</li>
+              <li>Emergency Services</li>
+              <li>Surgical Care</li>
+              <li>Laboratory Testing</li>
+              <li>Rehabilitation Services</li>
+            </ul>
+            <h5>Uniqueness:</h5>
+            <p>Teresia Hospital provides both general and specialized care in a welcoming environment.</p>
+          </div>
+        </div>
+
+        <!-- Nzoia Hospital -->
+        <div class="col-md-6 col-lg-4">
+          <div class="hospital-card">
+            <h4>Nzoia Hospital</h4>
+            <p>A hospital providing quality health services in the region, with an emphasis on patient-centered care.</p>
+            <p><strong>Phone:</strong> +254 55 203 4600</p>
+            <h5>Services Offered:</h5>
+            <ul>
+              <li>General Healthcare Services</li>
+              <li>Emergency Services</li>
+              <li>Medical Imaging</li>
+              <li>Paediatric Care</li>
+              <li>Surgical Services</li>
+            </ul>
+            <h5>Uniqueness:</h5>
+            <p>Nzoia Hospital is committed to providing excellent healthcare services to the community and surrounding areas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Map Section -->
+    <div class="container map-container" id="map"></div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 VHA. All Rights Reserved.</p>
+      <p><a href="#top">Back to Top</a></p>
+    </footer>
+
+    <!-- Google Maps API -->
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: {lat: 0.5667, lng: 34.5667} // Central Bungoma coordinates
+        });
+
+        var markers = [
+          {lat: 0.5667, lng: 34.5667, title: "Bungoma County Referral Hospital"},
+          {lat: 0.5612, lng: 34.5647, title: "Life Care Hospital Bungoma"},
+          {lat: 0.5623, lng: 34.5663, title: "St. Mary's Hospital"},
+          {lat: 0.5672, lng: 34.5701, title: "Ravine Hospital"},
+          {lat: 0.5655, lng: 34.5724, title: "Teresia Hospital Bungoma"},
+          {lat: 0.5700, lng: 34.5600, title: "Nzoia Hospital"}
+        ];
+
+        markers.forEach(function(location) {
+          new google.maps.Marker({
+            position: location,
+            map: map,
+            title: location.title
+          });
+        });
+      }
+    </script>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+
+  </body>
+</html>

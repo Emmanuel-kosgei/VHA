@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitals in Nairobi</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      h1 {
+        font-size: 50px;
+        color: #ffffff;
+        background-color: #007bff;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+      }
+      h2 {
+        font-size: 32px;
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+      }
+      section {
+        padding: 20px;
+        background-color: #ffffff;
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
+      ul.list-group {
+        padding: 0;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+      }
+      ul.list-group li {
+        padding: 10px;
+        cursor: pointer;
+      }
+      ul.list-group li:hover {
+        background-color: #f1f1f1;
+      }
+      .map-container {
+        height: 500px;
+        width: 100%;
+        margin-top: 40px;
+      }
+      .back-to-top {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .back-to-top a {
+        text-decoration: none;
+        font-size: 18px;
+        color: #007bff;
+      }
+      .back-to-top a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hospitals in Nairobi</h1>
+
+    <section>
+      <ul class="list-group">
+        <li><a href="#section1">Nairobi Hospital</a></li>
+        <li><a href="#section2">Aga Khan University Hospital</a></li>
+        <li><a href="#section3">Kenya National Hospital</a></li>
+        <li><a href="#section4">Mater Misericordiae Hospital</a></li>
+        <li><a href="#section5">MP Shah Hospital</a></li>
+        <li><a href="#section6">The Nairobi Women's Hospital</a></li>
+      </ul>
+    </section>
+
+    <section id="section1">
+      <h2>Nairobi Hospital</h2>
+      <p>
+        Address: Argwings Kodhek Road, Nairobi, Kenya<br>
+        Hours: Open 24 hours<br>
+        Phone: +254 20 284 6000<br>
+        Founded: 1954
+      </p>
+    </section>
+
+    <section id="section2">
+      <h2>Aga Khan University Hospital</h2>
+      <p>
+        Address: Nairobi, Kenya<br>
+        Hours: Open 24 hours<br>
+        Phone: +254 20 366 2000<br>
+        Founded: 1958
+      </p>
+    </section>
+
+    <section id="section3">
+      <h2>Kenya National Hospital (KNH)</h2>
+      <p>
+        Address: Hospitals Rd, Nairobi, Kenya<br>
+        Hours: Open 24 hours<br>
+        Phone: +254 20 2726300<br>
+        Founded: 1901
+      </p>
+    </section>
+
+    <section id="section4">
+      <h2>Mater Misericordiae Hospital</h2>
+      <p>
+        Address: Nairobi, Kenya<br>
+        Hours: Open 24 hours<br>
+        Phone: +254 20 6960000
+      </p>
+    </section>
+
+    <section id="section5">
+      <h2>MP Shah Hospital</h2>
+      <p>
+        Address: Nairobi, Kenya<br>
+        Hours: Open 24 hours<br>
+        Phone: +254 20 3741600
+      </p>
+    </section>
+
+    <section id="section6">
+      <h2>The Nairobi Women's Hospital</h2>
+      <p>
+        Address: Nairobi, Kenya<br>
+        Hours: Open 24 hours<br>
+        Phone: +254 20 2933000
+      </p>
+    </section>
+
+    <div class="map-container" id="map"></div>
+
+    <div class="back-to-top">
+      <a href="#top">Back to Top</a>
+    </div>
+
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: {lat: -1.286389, lng: 36.817223} // Central Nairobi coordinates
+        });
+
+        var markers = [
+          {lat: -1.286389, lng: 36.817223, title: "Nairobi Hospital"},
+          {lat: -1.285076, lng: 36.820939, title: "Aga Khan University Hospital"},
+          {lat: -1.287367, lng: 36.838161, title: "Kenya National Hospital"},
+          {lat: -1.303399, lng: 36.826157, title: "Mater Misericordiae Hospital"},
+          {lat: -1.315470, lng: 36.806086, title: "MP Shah Hospital"},
+          {lat: -1.285184, lng: 36.811216, title: "The Nairobi Women's Hospital"}
+        ];
+
+        markers.forEach(function(location) {
+          new google.maps.Marker({
+            position: location,
+            map: map,
+            title: location.title
+          });
+        });
+      }
+    </script>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+
+  </body>
+</html>

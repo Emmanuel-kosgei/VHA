@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitals in Mombasa</title>
+    <!-- Bootstrap for grid layout and utility classes -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      /* Global Styles */
+      body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      /* Header Section */
+      header {
+        background-color: #0d6efd;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        font-size: 8em;
+        font-weight: 600;
+      }
+
+      /* Card Layout for Hospitals */
+      .hospital-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 15px 0;
+        padding: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .hospital-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .hospital-card h4 {
+        font-size: 48px;
+        font-weight: 600;
+        color: #0d6efd;
+      }
+      .hospital-card h5 {
+        font-size: 30px;
+        font-weight: 600;
+        color: green;
+      }
+
+      .hospital-card p {
+        font-size: 25px;
+        color: #555;
+        line-height: 1.6;
+      }
+      .hospital-card li {
+        font-size: 25px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      /* Navbar Styles */
+      nav {
+        background-color: #343a40;
+      }
+
+      nav a {
+        color: #fff;
+        padding: 14px 20px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+
+      nav a:hover {
+        background-color: #007bff;
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #343a40;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Google Map Section */
+      .map-container {
+        width: 100%;
+        height: 400px;
+        margin-top: 30px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Hospitals in Mombasa</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Hospitals in Mombasa</h2>
+
+      <!-- Hospital Cards -->
+      <div class="row">
+        <!-- Mombasa County Referral Hospital -->
+        <div class="col-md-6 col-lg-4">
+          <div class="hospital-card">
+            <h4>Mombasa County Referral Hospital</h4>
+            <p>Located in Mombasa Town, this is the main referral hospital in the area, offering a wide range of medical services.</p>
+            <p><strong>Phone:</strong> +254 20 204 1000</p>
+            <h5>Services Offered:</h5>
+            <ul>
+              <li>Emergency Services</li>
+              <li>Outpatient and Inpatient Care</li>
+              <li>Maternity and Neonatal Services</li>
+              <li>General Surgery</li>
+              <li>Laboratory and Diagnostic Services</li>
+              <li>Pharmacy</li>
+            </ul>
+            <h5>Uniqueness:</h5>
+            <p>The hospital is equipped with a modern Intensive Care Unit (ICU) and is a major referral center for patients in the coastal region.</p>
+          </div>
+        </div>
+
+        <!-- Aga Khan Hospital Mombasa -->
+        <div class="col-md-6 col-lg-4">
+          <div class="hospital-card">
+            <h4>Aga Khan Hospital Mombasa</h4>
+            <p>A renowned private hospital offering comprehensive medical services with a reputation for quality patient care.</p>
+            <p><strong>Phone:</strong> +254 41 223 2501</p>
+            <h5>Services Offered:</h5>
+            <ul>
+              <li>Outpatient Services</li>
+              <li>General Surgery</li>
+              <li>Maternity Services</li>
+              <li>Paediatrics</li>
+              <li>Emergency Services</li>
+              <li>Dental Services</li>
+            </ul>
+            <h5>Uniqueness:</h5>
+            <p>Aga Khan Hospital is known for its world-class healthcare services and state-of-the-art medical equipment.</p>
+          </div>
+        </div>
+
+        <!-- Coast General Hospital -->
+        <div class="col-md-6 col-lg-4">
+          <div class="hospital-card">
+            <h4>Coast General Hospital</h4>
+            <p>The largest public hospital in Mombasa, offering a wide variety of medical services to the coastal region.</p>
+            <p><strong>Phone:</strong> +254 41 231 2000</p>
+            <h5>Services Offered:</h5>
+            <ul>
+              <li>General Medical Services</li>
+              <li>Emergency Care</li>
+              <li>Obstetrics and Gynaecology</li>
+              <li>Surgical Services</li>
+              <li>Cardiology</li>
+              <li>Lab and Imaging Services</li>
+            </ul>
+            <h5>Uniqueness:</h5>
+            <p>Coast General Hospital is a key healthcare provider in the region, with a focus on serving the diverse population.</p>
+          </div>
+        </div>
+
+        <!-- Pandya Memorial Hospital -->
+        <div class="col-md-6 col-lg-4">
+          <div class="hospital-card">
+            <h4>Pandya Memorial Hospital</h4>
+            <p>A private hospital offering specialized healthcare services with a focus on patient care and comfort.</p>
+            <p><strong>Phone:</strong> +254 41 548 8200</p>
+            <h5>Services Offered:</h5>
+            <ul>
+              <li>Medical Consultations</li>
+              <li>Emergency Medical Services</li>
+              <li>Laboratory Services</li>
+              <li>General and Specialist Surgery</li>
+              <li>Maternity and Neonatal Care</li>
+            </ul>
+            <h5>Uniqueness:</h5>
+            <p>Pandya Memorial Hospital is known for its quality services and a dedicated team of healthcare professionals.</p>
+          </div>
+        </div>
+
+        <!-- Mombasa Hospital -->
+        <div class="col-md-6 col-lg-4">
+          <div class="hospital-card">
+            <h4>Mombasa Hospital</h4>
+            <p>Renowned for its excellent care and specialized treatments in a comfortable and caring environment.</p>
+            <p><strong>Phone:</strong> +254 41 231 1020</p>
+            <h5>Services Offered:</h5>
+            <ul>
+              <li>Inpatient and Outpatient Care</li>
+              <li>Emergency Services</li>
+              <li>Surgical Care</li>
+              <li>Laboratory Testing</li>
+              <li>Rehabilitation Services</li>
+            </ul>
+            <h5>Uniqueness:</h5>
+            <p>Mombasa Hospital is dedicated to providing affordable, high-quality care in a patient-friendly setting.</p>
+          </div>
+        </div>
+
+        <!-- Lifecare Hospital Mombasa -->
+        <div class="col-md-6 col-lg-4">
+          <div class="hospital-card">
+            <h4>Lifecare Hospital Mombasa</h4>
+            <p>Offering quality healthcare services with a focus on personalized care and advanced medical technology.</p>
+            <p><strong>Phone:</strong> +254 41 222 2222</p>
+            <h5>Services Offered:</h5>
+            <ul>
+              <li>General Healthcare Services</li>
+              <li>Emergency Services</li>
+              <li>Medical Imaging</li>
+              <li>Paediatric Care</li>
+              <li>Surgical Services</li>
+            </ul>
+            <h5>Uniqueness:</h5>
+            <p>Lifecare Hospital emphasizes compassionate care while utilizing modern medical technologies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Map Section -->
+    <div class="container map-container" id="map"></div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 VHA. All Rights Reserved.</p>
+      <p><a href="#top">Back to Top</a></p>
+    </footer>
+
+    <!-- Google Maps API -->
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: {lat: -4.0435, lng: 39.6682} // Central Mombasa coordinates
+        });
+
+        var markers = [
+          {lat: -4.0435, lng: 39.6682, title: "Mombasa County Referral Hospital"},
+          {lat: -4.0545, lng: 39.6692, title: "Aga Khan Hospital Mombasa"},
+          {lat: -4.0433, lng: 39.6678, title: "Coast General Hospital"},
+          {lat: -4.0405, lng: 39.6690, title: "Pandya Memorial Hospital"},
+          {lat: -4.0578, lng: 39.6721, title: "Mombasa Hospital"},
+          {lat: -4.0475, lng: 39.6675, title: "Lifecare Hospital Mombasa"}
+        ];
+
+        markers.forEach(function(location) {
+          new google.maps.Marker({
+            position: location,
+            map: map,
+            title: location.title
+          });
+        });
+      }
+    </script>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+
+  </body>
+</html>
